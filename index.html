@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- contact validation -->
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js"></script>
+   <!-- json -->
+   <script type="text/javascript" src="script.js"></script>
+   <!--sweetalert-->
+   <script src="sweetalert2.all.js"></script>
+   <!-- Include a polyfill for ES6 Promises (optional) for IE11, UC Browser and Android browser support -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+   <link href="https://cdn.jsdelivr.net/sweetalert2/6.5.6/sweetalert2.min.css" rel="stylesheet" type="text/css">
+    
+    <title>OPERATIVA</title>
+</head>
+<body>
+    <h1>OPERATIVA</h1>
+    <form id="form" name="formulario"  data-toggle="validator" role="form">
+        Correo: <input type="text" id="email"><br/>
+        Clave: <input type="password" id="clave">
+        <input type="submit" value="Enviar">
+      
+      </form>
+
+      <script>
+        $("#form").validator().on("submit", function (event) {
+          if (event.isDefaultPrevented()) {
+              // handle the invalid form...
+              console.log("falta llenar");
+          } else {
+              event.preventDefault();
+              send();
+                  } 
+          });
+  </script>
+</body>
+</html>
