@@ -1,27 +1,4 @@
-function send(){ 
-    swal({
-     title: '¿Estas seguro de enviar este formulario?',
-     /* text: 'You will not be able to recover this imaginary file!', */
-     type: 'warning',
-     showCancelButton: true,
-     confirmButtonText: 'Si, enviar!',
-     cancelButtonText: 'Cancelar'
-    }).then((result) => {
-     if (result.value) {
-       swal(
-         'Enviado!','Su formulario fue enviado!.','success'
-       )
-       sends();
-     // For more information about handling dismissals please visit
-     // https://sweetalert2.github.io/#handling-dismissals
-     } else if (result.dismiss === swal.DismissReason.cancel) {
-       swal(
-         'Cancelado!', 'Su formulario no se envio', 'error'
-       )
-     }
-    })
-    } 
-    
+
     function sends()
     {
     
